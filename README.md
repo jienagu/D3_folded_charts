@@ -1,7 +1,7 @@
 # D3_folded_charts
 This is a showcase of interactive charts in shiny and Rmarkdown reports! Live shinyapp: https://appforiarteam.shinyapps.io/Interactive_charts_reports/ 
 
-Note: this app used `noteMD` R package and `nivopie` R package (htmlwidget) from my Github! 
+Note: this app used `noteMD` R package (Repos: https://github.com/jienagu/noteMD) and `nivopie` (Repos: https://github.com/jienagu/nivopie) R package (htmlwidget) from my Github! 
 
 ## The design 
 
