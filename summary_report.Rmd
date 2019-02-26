@@ -1,0 +1,38 @@
+---
+title: "Summary Report"
+author: "Airline: `r input$airlines`"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+
+
+```{r Interval1, out.width = "510px"}
+saveWidget(bar_graphD3(), file= 'temp_Pivot_single.html')
+respivot = webshot::webshot('temp_Pivot_single.html','my-screenshot-Pivot_single.png', zoom = 1.2)
+knitr::include_graphics(respivot)
+```
+
+```{r Interval_pie,eval=input$OneMore, out.width = "510px"}
+saveWidget(pie_graph(), file= 'temp_Pivot_single_pie.html')
+respivot_pie = webshot::webshot('temp_Pivot_single_pie.html','my-screenshot-Pivot_single_pie.png', zoom = 1.2)
+knitr::include_graphics(respivot_pie)
+```
+
+
+```{r Interval2, warning = FALSE}
+note_in_md_pdf(input$markdowninput)
+```
+
+
+
+
+
+
+
+
+
